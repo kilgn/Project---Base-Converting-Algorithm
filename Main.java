@@ -26,7 +26,7 @@ class Main
         }
         return answer;
     }
-
+    static double ans = 0;
     public static int RecursiveBaseConverter(ArrayList<Integer> digits, int base)
     {
         
@@ -36,12 +36,11 @@ class Main
         }
         else // temp list [1,2,0,5]
         {   
-            int tempDigit = digits.get(0);
             ArrayList<Integer> newDigits = digits;
             newDigits.remove(0);
-            double tempAns = tempDigit * Math.pow(base, digits.size() - 1) + RecursiveBaseConverter(newDigits, base);
-            int ans = (int)tempAns;
-            return ans;
+            ans += digits.get(0) * Math.pow(base, digits.size() - 1) + RecursiveBaseConverter(newDigits, base);
+            int newAns = (int)ans;
+            return newAns;
         }
         
 
