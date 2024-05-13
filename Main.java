@@ -37,9 +37,10 @@ class Main
         else // temp list [1,2,0,5]
         {   
             int coefficient = digits.get(0);
+            int digitsSize = digits.size();
             ArrayList<Integer> newDigits = digits;
             newDigits.remove(0);
-            double tempAns = coefficient * Math.pow(base, digits.size() - 1) + RecursiveBaseConverter(newDigits, base);
+            double tempAns = coefficient * Math.pow(base, digitsSize - 1) + RecursiveBaseConverter(newDigits, base);
             int ans = (int)tempAns;
             return ans;
         }
