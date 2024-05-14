@@ -31,7 +31,7 @@ class Main
         }
         return answer;
     }
-
+    // Recursive base converter algorithm.
     public static int RecursiveBaseConverter(ArrayList<Integer> digits, int base) // Overall time complexity of O(log(n))
     {
         
